@@ -24,7 +24,65 @@
 
         var code = `import turtle
 pen = turtle.Turtle()
-pen.write("Hello World")
+# Draw fastest speed
+pen.speed(0)
+
+def draw_filled_triangle(x, y, size, fill_color):
+    # Move the pen to the starting position
+    pen.penup()
+    pen.goto(x, y)
+    pen.pendown()
+    
+    # Set the fill color
+    pen.fillcolor(fill_color)
+    
+    # Start filling the shape
+    pen.begin_fill()
+    
+    # Draw the triangle
+    for _ in range(3):
+        pen.forward(size)
+        pen.left(120)
+    
+    # End filling the shape
+    pen.end_fill()
+
+def draw_filled_rectangle(x, y, width, height, fill_color):
+    # Move the pen to the starting position
+    pen.penup()
+    pen.goto(x, y)
+    pen.pendown()
+    
+    # Set the fill color
+    pen.fillcolor(fill_color)
+    
+    # Start filling the shape
+    pen.begin_fill()
+    
+    # Draw the rectangle
+    for _ in range(2):
+        pen.forward(width)
+        pen.left(90)
+        pen.forward(height)
+        pen.left(90)
+    
+    # End filling the shape
+    pen.end_fill()
+
+def draw_text(x, y, text, font_size):
+    # Move the pen to the starting position
+    pen.penup()
+    pen.goto(x, y)
+    pen.pendown()
+    
+    # Draw the text
+    pen.write(text, align="center", font=("Arial", font_size, "normal"))
+
+draw_filled_triangle(0, 0, 100, "blue")
+draw_filled_rectangle(-150, -50, 200, 100, "red")
+draw_text(-50, -160, "This is a red rectangle", 24)
+
+pen.hideturtle()
           `
           await pyodide.runPython(code);
           await showScene();
