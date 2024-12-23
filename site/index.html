@@ -35,7 +35,7 @@
         pyodide = await loadPyodide();
 
         pyodide.registerJsModule("basthon", fakeBasthonPackage)
-        await pyodide.loadPackage("/turtle-0.0.1-py3-none-any.whl")
+        await pyodide.loadPackage("./turtle-0.0.1-py3-none-any.whl")
 
         console.log('Turtle loaded');
 
