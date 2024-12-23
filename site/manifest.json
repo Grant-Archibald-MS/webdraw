@@ -1,7 +1,8 @@
 {
     "name": "Drawing App",
     "short_name": "Drawing",
-    "start_url": "/webdraw/index.html",
+    "scope": "https://grant-archibald-ms.github.io/webdraw/",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
