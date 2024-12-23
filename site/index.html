@@ -2,24 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Pyodide</title>
-    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+    <title>Draw</title>
+    <link rel="icon" href="/favicon.ico" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <script src="pyodide.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, (error) => {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+          });
+        }
+    </script>
   </head>
   <body>
     <pre id="info">Loading drawing...</pre>
     <div id="visual" style="width: fit-content;"></div>
 
     <script type="module">
+    document.addEventListener('DOMContentLoaded', async () => {
+      console.log('Started');
       const info = document.getElementById("info");
       const visual = document.getElementById("visual");
 
       let pyodide;
 
       const main = async () => {
+        console.log('Main Started');
         pyodide = await loadPyodide();
 
         pyodide.registerJsModule("basthon", fakeBasthonPackage)
-        await pyodide.loadPackage("./turtle-0.0.1-py3-none-any.whl")
+        await pyodide.loadPackage("/turtle-0.0.1-py3-none-any.whl")
+
+        console.log('Turtle loaded');
+
         info.style.display = 'none'
 
         var code = `import turtle
@@ -84,6 +103,7 @@ draw_text(-50, -160, "This is a red rectangle", 24)
 
 pen.hideturtle()
           `
+          console.log('Run python')
           await pyodide.runPython(code);
           await showScene();
       };
@@ -117,6 +137,7 @@ pen.hideturtle()
       }
 
       main();
+    })
     </script>
   </body>
 </html>
