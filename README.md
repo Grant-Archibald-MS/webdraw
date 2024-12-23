@@ -4,6 +4,8 @@ This sample web based application to show how to create web based drawing.  The 
 
 While this example focuses on drawing in the browser, the concepts and [Python Standard Libraries](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) provide a wide range of scenarios that could be expanded to explore creating web-based Python applications in the browser and as offline applications.
 
+A GitHub pages static version of this sample is available at [](https://grant-archibald-ms.github.io/webdraw/)
+
 ### Progressive Web Applications (PWAs)
 
 Lets start of by exploring Progressive Web Applications (PWAs). PWAs are web applications that use modern web capabilities to deliver an app-like experience to users. They can be installed on a user's device and run offline, providing a seamless experience similar to native apps.
@@ -27,10 +29,11 @@ You can use sites like [icongen](https://cthedot.de/icongen/) to upload images a
 
 Service workers are scripts that run in the background of your browser, separate from the web page, enabling features that don't need a web page or user interaction. They are essential for PWAs as they handle caching and offline functionality, allowing the app to work even when the network is unavailable. Service workers act as a proxy between the web application and the network, intercepting network requests and serving cached responses when necessary.
 
-For more detailed information on service workers, you can refer to the [Mozilla documentation on Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)(https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers).
+For more detailed information on service workers, you can refer to the [Mozilla documentation on Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
-> **HTTPS Requirement**
-> NOTE: For security reasons, service workers can only be registered on sites served over HTTPS. This ensures that the communication between the client and server is encrypted and secure, preventing man-in-the-middle attacks. When developing or deploying a web application that uses service workers, make sure that your site is served over HTTPS.
+#### HTTPS Requirement
+
+> IMPORTANT: For security reasons, service workers can only be registered on sites served over HTTPS. This ensures that the communication between the client and server is encrypted and secure, preventing man-in-the-middle attacks. When developing or deploying a web application that uses service workers, make sure that your site is served over HTTPS.
 
 ### WebAssembly (Wasm)
 
