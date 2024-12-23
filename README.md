@@ -4,7 +4,7 @@ This sample web based application to show how to create web based drawing.  The 
 
 While this example focuses on drawing in the browser, the concepts and [Python Standard Libraries](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) provide a wide range of scenarios that could be expanded to explore creating web-based Python applications in the browser and as offline applications.
 
-A GitHub pages static version of this sample is available at [](https://grant-archibald-ms.github.io/webdraw/)
+A GitHub pages static version of this sample is available at [https://grant-archibald-ms.github.io/webdraw/](https://grant-archibald-ms.github.io/webdraw/)
 
 ### Progressive Web Applications (PWAs)
 
@@ -33,7 +33,9 @@ For more detailed information on service workers, you can refer to the [Mozilla 
 
 #### HTTPS Requirement
 
-> IMPORTANT: For security reasons, service workers can only be registered on sites served over HTTPS. This ensures that the communication between the client and server is encrypted and secure, preventing man-in-the-middle attacks. When developing or deploying a web application that uses service workers, make sure that your site is served over HTTPS.
+> IMPORTANT: For security reasons, service workers can only be registered on sites served over HTTPS. This ensures that the communication between the client and server is encrypted and secure, preventing man-in-the-middle attacks.
+
+When developing or deploying a web application that uses service workers, make sure that your site is served over HTTPS.
 
 ### WebAssembly (Wasm)
 
