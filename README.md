@@ -29,7 +29,7 @@ You can use sites like [icongen](https://cthedot.de/icongen/) to upload images a
 
 Service workers are scripts that run in the background of your browser, separate from the web page, enabling features that don't need a web page or user interaction. They are essential for PWAs as they handle caching and offline functionality, allowing the app to work even when the network is unavailable. Service workers act as a proxy between the web application and the network, intercepting network requests and serving cached responses when necessary.
 
-For more detailed information on service workers, you can refer to the [Mozilla documentation on Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers).
+For more detailed information on service workers, you can refer to [How do Service Workers work?](https://microsoft.github.io/win-student-devs/#/30DaysOfPWA/core-concepts/04?id=how-do-service-workers-work) and [Mozilla documentation on Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
 #### HTTPS Requirement
 

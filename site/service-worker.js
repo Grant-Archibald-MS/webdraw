@@ -26,3 +26,5 @@ self.addEventListener('fetch', (event) => {
         })
     );
 });
+
+workbox.precaching.precacheAndRoute(self.__WB_MANIFEST || []);
