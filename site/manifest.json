@@ -1,7 +1,7 @@
 {
     "name": "Drawing App",
     "short_name": "Drawing",
-    "start_url": "/webdraw/index.html",
+    "start_url": "/webdraw/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
