@@ -6,6 +6,8 @@ While this example focuses on drawing in the browser, the concepts and [Python S
 
 A GitHub pages static version of this sample is available at [https://grant-archibald-ms.github.io/webdraw/](https://grant-archibald-ms.github.io/webdraw/)
 
+Or Scan the QR Code ![Scan Code](./qrcode.png). You can use [qrcode](./qrcode/README.md) as an example of how to generate a QR Code using python
+
 ### Progressive Web Applications (PWAs)
 
 Lets start of by exploring Progressive Web Applications (PWAs). PWAs are web applications that use modern web capabilities to deliver an app-like experience to users. They can be installed on a user's device and run offline, providing a seamless experience similar to native apps.
